@@ -72,7 +72,6 @@
     in rec {
       packages = {
         sf-pro = makeAppleFont "sf-pro" "SF Pro Fonts.pkg" sf-pro;
-        sf-pro-nerd = makeNerdAppleFont "sf-pro-nerd" "SF Pro Fonts.pkg" sf-pro;
 
         sf-compact = makeAppleFont "sf-compact" "SF Compact Fonts.pkg" sf-compact;
 
