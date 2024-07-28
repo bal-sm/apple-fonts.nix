@@ -75,7 +75,6 @@
         sf-pro-nerd = makeNerdAppleFont "sf-pro-nerd" "SF Pro Fonts.pkg" sf-pro;
 
         sf-compact = makeAppleFont "sf-compact" "SF Compact Fonts.pkg" sf-compact;
-        sf-compact-nerd = makeNerdAppleFont "sf-compact-nerd" "SF Compact Fonts.pkg" sf-compact;
 
         sf-mono = makeAppleFont "sf-mono" "SF Mono Fonts.pkg" sf-mono;
 
