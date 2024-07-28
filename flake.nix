@@ -52,23 +52,6 @@
           find -name \*.ttf -exec mv {} $out/share/fonts/truetype/ \;
         '';
       });
-      makeNerdAppleFont = (name: pkgName: src: pkgs.stdenvNoCC.mkDerivation {
-        inherit name src;
-
-        unpackPhase = unpackPhase pkgName;
-
-        buildInputs = with pkgs; commonBuildInputs ++ [ parallel nerd-font-patcher ];
-        setSourceRoot = "sourceRoot=`pwd`";
-
-        buildPhase = ''
-          find -name \*.ttf -o -name \*.otf -print0 | parallel -j $NIX_BUILD_CORES -0 nerd-font-patcher -c {}
-        '';
-
-        installPhase = commonInstall + ''
-          find -name \*.otf -maxdepth 1 -exec mv {} $out/share/fonts/opentype/ \;
-          find -name \*.ttf -maxdepth 1 -exec mv {} $out/share/fonts/truetype/ \;
-        '';
-      });
     in rec {
       packages = {
         sf-pro = makeAppleFont "sf-pro" "SF Pro Fonts.pkg" sf-pro;
