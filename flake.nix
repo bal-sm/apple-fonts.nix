@@ -81,7 +81,6 @@
         sf-mono-nerd = makeNerdAppleFont "sf-mono-nerd" "SF Mono Fonts.pkg" sf-mono;
 
         sf-arabic = makeAppleFont "sf-arabic" "SF Arabic Fonts.pkg" sf-arabic;
-        sf-arabic-nerd = makeNerdAppleFont "sf-arabic-nerd" "SF Arabic Fonts.pkg" sf-arabic;
 
         ny = makeAppleFont "ny" "NY Fonts.pkg" ny;
       };
